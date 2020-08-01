@@ -10,14 +10,21 @@ orString = input("Enter a word to convert into pig latin :")
 vowels = ["a", "e", "i", "o", "u", "y"]
 pigString = ""
 x = len(orString)-1
-y = 1
 
-if orString[0] in vowels:
-    pigString = pigString + orString + "yay"
-else:   
-    while y <= x:     
-        pigString = pigString + orString[y]
-        y = y + 1
-    pigString = pigString + orString[0] + "ay"
-        
+k = 0
+
+beginCon = ""
+
+if orString[k] not in vowels:
+    while orString[k] not in vowels:
+        beginCon += orString[k]
+        k+=1
+    while k <= x:    
+        pigString += orString[k]
+        k+=1
+    pigString += beginCon + "ay"
+    
+else:
+    pigString += orString + "yay"
+
 print(pigString)
