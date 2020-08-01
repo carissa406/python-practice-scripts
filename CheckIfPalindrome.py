@@ -10,14 +10,18 @@ orString = input("Enter a word for palindrome validation: ")
 noSpaces = ""
 newString = ""
 x = len(orString)-1
-y = len(orString)-1
 
-while x >= 0:
-    newString += orString[x]
-    x = x-1
+for i in orString:
+    if i.isalpha():
+        noSpaces += i.lower()
+
+y = len(noSpaces) -1
+while y >= 0:
+    newString += noSpaces[y]
+    y = y-1
 
 
-if newString == orString:
+if newString == noSpaces:
     print("This is a palindrome.")
 else:
     print("This is not a palindrome.")
