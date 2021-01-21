@@ -1,4 +1,4 @@
-problems = ["98 + 3g5", "3801 - 2", "45 + 43", "123 + 49"]
+problems = ["98 + 35", "3801 - 2", "45 + 43", "123 + 49"]
 solution = True
 
 def arithmetic_arranger(problems, solution=False):
